@@ -1,41 +1,54 @@
 <head>
+	<meta charset="UTF-8">
     <link rel="stylesheet" href="style/login.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="script/login.js"></script>
-</head>>
+	<title>Natus Est Scientia</title>
+</head>
 
 
 <div class="form-wrap">
     <div class="tabs">
-        <h3 class="signup-tab"><a class="active" href="#signup-tab-content">Sign Up</a></h3>
-        <h3 class="login-tab"><a href="#login-tab-content">Login</a></h3>
+        <h3 class="signup-tab"><a class="active" href="#signup-tab-content">Регистрация</a></h3>
+        <h3 class="login-tab"><a href="#login-tab-content">Авторизация</a></h3>
     </div><!--.tabs-->
 
     <div class="tabs-content">
         <div id="signup-tab-content" class="active">
             <form class="signup-form" action="" method="post">
                 <input type="email" class="input" id="user_email" autocomplete="off" placeholder="Email">
-                <input type="text" class="input" id="user_name" autocomplete="off" placeholder="Username">
-                <input type="password" class="input" id="user_pass" autocomplete="off" placeholder="Password">
-                <input type="submit" class="button" value="Sign Up">
+                <input type="text" class="input" id="user_login" autocomplete="off" placeholder="Логин">
+                <input type="password" class="input" id="user_pass" autocomplete="off" placeholder="Пароль">
+                <input type="text" class="input" id="user_sname" autocomplete="off" placeholder="Фамилия">
+                <input type="text" class="input" id="user_fname" autocomplete="off" placeholder="Имя">
+                <input type="text" class="input" id="user_tname" autocomplete="off" placeholder="Отчество">
+                <input type="date" class="input" id="user_birth" autocomplete="off" placeholder="Дата рождения">
+                <input type="text" class="input" id="user_birth" autocomplete="off" placeholder="Наименование ВУЗа">
+                <input type="text" class="input" id="user_rules" autocomplete="off" placeholder="Статус" list="rules_list">
+		<datalist id="rules_list">
+    			<option>Ученик</option>
+    			<option>Учитель</option>
+   		</datalist> 
+
+                <input type="button" class="button" value="Регистрация" onclick="location.href='/profile1/profile.html'">
             </form><!--.login-form-->
             <div class="help-text">
-                <p>By signing up, you agree to our</p>
-                <p><a href="#">Terms of service</a></p>
+                <p>Регистрируясь, вы соглашаетесь с нашей</p>
+                <p><a href="#">политикой конфидециальности</a></p>
             </div><!--.help-text-->
         </div><!--.signup-tab-content-->
 
         <div id="login-tab-content">
             <form class="login-form" action="" method="post">
-                <input type="text" class="input" id="user_login" autocomplete="off" placeholder="Email or Username">
-                <input type="password" class="input" id="user_pass" autocomplete="off" placeholder="Password">
+                <input type="text" class="input" id="user_login" autocomplete="off" placeholder="Логин">
+                <input type="password" class="input" id="user_pass" autocomplete="off" placeholder="Пароль">
                 <input type="checkbox" class="checkbox" id="remember_me">
-                <label for="remember_me">Remember me</label>
+                <label for="remember_me">Запомнить меня</label>
 
-                <input type="submit" class="button" value="Login">
+                <input type="button" class="button" value="Авторизация" onclick="location.href='/profile1/profile.html'">
             </form><!--.login-form-->
             <div class="help-text">
-                <p><a href="#">Forget your password?</a></p>
+                <p><a href="#">Забыли пароль?</a></p>
             </div><!--.help-text-->
         </div><!--.login-tab-content-->
     </div><!--.tabs-content-->
